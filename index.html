@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="./bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css" rel="stylesheet">    
+    <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const url = 'https://restcountries.eu/rest/v2/all';
+        fetch(url)
+        .then((resp) => resp.json())
+        .then(function(data) {
+            var select = document.getElementById("country");
+            data.map((v, i)=> 
+                select.options[i] = new Option(v.name))       
+        })
+    </script>
+    <title>Form Registrasi</title>
+  </head>
+  <body>
+        <div class="header-section">
+            <div class="header"></div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="navbar-logo">
+                        <a class="logo" href="#"><img src="./img/logo.png" alt=""></a>
+                    </div>
+                    <div class="lang d-flex">
+                        <h6 class="text-lang">Language:</h6>
+                        <div class="dropdown">
+                            <button class="btn button-flag no-border dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              English
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <i class="fas fa-cog text-setting"></i>
+                    </div>
+                    
+                  </div>
+                </div>
+            </nav>
+        </div>
+        <div class="register">
+            <a href="" class="register">You don't have an account yet, please create new account</a>
+        </div>
+        <div class="form-register py-5">
+            <div class="container">
+                <form class="my-5">
+                <h5 class="fw-bold">Create New Account</h5>
+                <div class="title my-3">
+                    <h6 class="fw-bold">Title</h6>
+                    <div class="form-check form-check-inline check-box">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Mrs</label>
+                      </div>
+                      <div class="form-check form-check-inline check-box">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Ms</label>
+                      </div>
+                      <div class="form-check form-check-inline check-box">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Mdm</label>
+                      </div>
+                      <div class="form-check form-check-inline check-box">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Mr</label>
+                      </div>
+                      <div class="form-check form-check-inline check-box">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Dr</label>
+                      </div>
+                </div>
+                
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Last name<span class="text-danger fs-3">*</span></label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last name">
+                              </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">First name<span class="text-danger fs-3">*</span></label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="First name">
+                              </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="exampleInputPassword1" class="form-label">Mobile phone number<span class="text-danger fs-3">*</span></label>
+                        <div class="d-flex mr-5">
+                            <div class="dropdown">
+                                <button class="btn button-flag dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Flag
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item" href="#">Action</a></li>
+                                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-md-5 col-sm-12">
+                                <div class="input-group mb-3">      
+                                    <span class="input-group-text">+852</span>                          
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mobile phone number">
+                                </div>
+                            </div>  
+                        </div>
+                        
+                            
+                        
+                                              
+                    </div>
+                    <div class="row">
+                        <h5 class="fw-bold my-3">Address</h5>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="Address">
+                              </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5 class="fw-bold my-3">Address</h5>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Country / Location <span class="text-danger fs-3">*</span></label>
+                                <select class="from-control form-country" id="country">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Province/Districk<span class="text-danger fs-3">*</span></label>
+                                <select class="from-control form-country" id="country">
+                                    <option value="1">Jawa Timur</option>
+                                    <option value="2">Jawa Tengah</option>
+                                    <option value="3">Jawa Barat</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <h5 class="fw-bold my-3">Contact</h5>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email Address <span class="text-danger fs-3">*</span></label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="Address">
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Date of birth<span class="text-danger fs-3">*</span></label>
+                                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="DD">
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Month<span class="text-danger fs-3">*</span></label>
+                                <div class="input-container">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="MM">
+                               </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Year<span class="text-danger fs-3">*</span></label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="YYYY">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-note mt-5 pt-5">
+                        <h2 class="fw-bold">Standart Privacy Note</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, quisquam? Porro nam a, repellat at quaerat voluptatibus inventore quis. Animi dicta amet delectus numquam molestiae quos nulla recusandae a, voluptatum sed distinctio maiores aperiam eos vel quisquam, iure voluptates laudantium expedita voluptate tenetur qui saepe non, asperiores ullam? Perspiciatis, ab.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quos a nemo odio totam, officia consequatur, omnis dolor dolore dolores ut architecto commodi accusamus quaerat, voluptas praesentium nam doloremque suscipit deleniti numquam sit voluptatem ipsum eligendi! Obcaecati dolorum inventore qui dolore in consequatur cum? Esse adipisci in pariatur vitae sunt.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus debitis libero maiores sint? Quia non debitis eligendi nemo tempore, velit delectus ratione. Sit, voluptates saepe! Accusamus molestias consequatur omnis quod aliquid reprehenderit! Alias ex tempore rem mollitia dolores illum ipsa?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eum! Ipsa dolore nesciunt labore ad suscipit doloremque, quo iure necessitatibus, quidem deserunt sapiente? Molestias minus officiis laboriosam odit itaque debitis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur perspiciatis mollitia explicabo officiis quas. Repudiandae, quasi? Amet vel distinctio nobis.</p>
+                        <p>I want to receive information or communication from L'OCCITANE</p>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="label-switch">
+                                    <p class="mr-2 mb-0">SMS & Mobile Call</p>
+                                </div>
+                                
+                                <div class="form-check form-switch ">
+                                    <input class="form-check-input ml-5" type="checkbox" id="flexSwitchCheckDefault">                                
+                                  </div>
+                                  
+                            </div>
+                            <div class="col-md-4 col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="label-switch">
+                                    <p class="mr-2 mb-0">Emailing</p>
+                                </div>
+
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">                                
+                                  </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="label-switch">
+                                    <p class="mr-2 mb-0">Mailing</p>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">                                
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="form-check form-check-inline check-box mt-5 pt-5">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              I have read and understood the above terms and condition and hereby agrre that I will be bounded by have submitted this application form
+                            </label>
+                          </div>
+                    </div>
+                    <div class="btn-create my-3">
+                        <button type="button" class="btn btn-warning fw-bold btn-res">CREATE CUSTOMER</button>
+                    </div>
+                    
+                  </form>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <h4>v1.0.7</h4>
+            </div>            
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
