@@ -4,26 +4,15 @@ html, body {
     margin: 0;
 	padding: 0;
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
 	font-family: 'Raleway', sans-serif;
 }
-
-ul li{
-	text-decoration-style: none;
-}
-
 a {
 	text-decoration: none;
 }
-
-.header {
-	width: 100%;
-	height: 10px;
-	background-color: orange;
-}
 .navbar {
-	
+	padding: 20px 0;
+	border-top: 10px solid orange;
+	border-bottom: 5px solid orange;
 }
 .navbar-logo {
 	text-align: center;
@@ -31,58 +20,6 @@ a {
 .logo img{
 	width: 20%;
 }
-.register {
-	width: 100%;
-	padding: 10px 0;
-	text-align: center;
-	background-color: orange;
-	color: black;
-	font-weight: 600;
-}
-label {
-	font-weight: 600;
-}
-.privacy-note p {
-	font-style: italic;
-	font-size: 18px;
-}
-.btn-create {
-	float: right;
-}
-.footer {
-	width: 100%;
-	height: 40px;
-	text-align: center;
-	border-bottom: 2px solid black;
-	padding: 5px 0;
-}
-.label-switch {
-	margin-right: 10px;
-}
-
-.form-switch .form-check-input {
-	height: 25px;
-    width: 50px;
-    background-color: lightgrey;
-}
-
-.check-box .form-check-input[type=checkbox] {
-    border: 1px solid orange;
-}
-.form-country {
-	height: 37px;
-	width: 100%;
-	border-radius: 4px;
-	border: 1px solid lightgray;
-}
-.button-flag {
-	width: 70px;
-    background: #fff;
-    color: black;
-	border: 1px solid lightgrey;
-	margin-right: 10px;
-}
-
 .lang {
 	position: absolute;
     right: 7rem;
@@ -91,23 +28,106 @@ label {
 	border: 1px solid white !important;
 }
 .text-lang {
-	margin-bottom: 0px;
     padding-top: 9px;
     font-weight: bold;
 }
 .text-setting {
 	font-size: 20px;
-	padding-top: 10px;
+	padding-top: 7px;
 	padding-left: 20px;
+}
+.btn-check:focus+.btn, .btn:focus {
+    box-shadow: none;
+}
+.register-text {
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	background-color: orange;
+	color: black;
+	font-weight: 600;
+}
+.check-box .form-check-input[type=checkbox] {
+    border: 1px solid orange;
+	width: 20px;
+	height: 20px;
+}
+.button-flag {
+	width: 70px;
+    background: #fff;
+    color: black;
+	border: 1px solid #ced4da;
+	margin-right: 10px;
+}
+.form-country {
+	height: 37px;
+	width: 100%;
+	border-radius: 4px;
+	border: 1px solid #ced4da;
+	padding: 0 10px;
+	color: #212529;
+}
+.privacy-note {
+	font-size: 18px;
+}
+.privacy-text p {
+	font-style: italic;
+}
+.label-switch {
+	margin-right: 10px;
+}
+.form-switch .form-check-input {
+	height: 25px;
+    width: 50px;
+    background-color: lightgrey;
+}
+.form-check-input {
+	border: none;
+}
+.btn-create {
+	float: right;
+}
+.btn-res {
+	padding: 10px 40px;
+}
+.footer {
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	border-bottom: 2px solid black;
+	padding: 5px 0;
 }
 
 @media screen and (max-width: 500px) {
+	.logo img{
+		width: 50%;
+	}
+	.register-text {
+		margin-top: 10px;
+	}
+	.register {
+		margin: 0 20px;
+	}	
+	.title, .row-mx-3 {
+		margin: 0 15px;
+	}
+	.switch-emailing, .switch-mailing {
+		justify-content: start;
+	}
+	.switch-text {
+		width: 170px;
+	}
+	.switch-label {
+		margin-bottom: 10px;
+	}
 	.btn-create {
 		display: flex;
 		justify-content: center;
 		width: 100%;
 	}
 	.btn-res {
-		width: 100vw;
-	}
+		width: 85vw;
+	}	
 }
+
+
